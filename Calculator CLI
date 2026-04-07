@@ -1,6 +1,6 @@
 import math
 
-operator = input("Selection one of the following operators for calculation: +, -, *, /, //, %, **, √: ")
+operator = input("Select one of the following operators for calculation: +, -, *, /, //, %, **, √: ")
 
 if operator == "**":
     num3 = int(input("Enter the base : "))
