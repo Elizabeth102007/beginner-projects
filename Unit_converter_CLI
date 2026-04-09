@@ -1,0 +1,54 @@
+print("Available options for conversion are : km-m, celsius-fahrenheit, usd-naira, kg-lb (The conversion can be vice versa)")
+option = input("What will you like to convert?:   ").lower()
+if option == "km-m":
+    unit = input("What unit of measure do you want to convert from(km or m)?: ")
+    distance = float(input("What is the value?: "))
+    if unit == "km".lower():
+        result = 1000 * distance
+        print(f"The converted value from {distance}km to meters is {round(result, 2)}m.")
+        print("The formula used is kilometers = 1000 * distance in meters")
+    elif unit == "m".lower():
+        result = distance / 1000
+        print(f"The converted value from {distance}m to kilometers is {round(result, 2)}km.")
+        print("The formula used is meters = distance in kilometers / 1000")
+
+elif option == "celsius-fahrenheit":
+    unit = input("What unit do you want to convert from(celsius or fahrenheit)?: ").lower()
+    temp = float(input("What is the value?: "))
+    if unit == "celsius".lower():
+        result = (temp * 9 ) / 5 + 32
+        print(f"The converted value from {temp}°C to fahrenheit is {round(result, 1)}°F ")
+        print("The formula used is celsius = (temp * 9 )/ 5 + 32")
+    elif unit == "fahrenheit".lower():
+        result = (temp -32) * 5/9
+        print(f"The converted value from {temp}°F to Celsius is {round(result, 1)}°C")
+        print(f"The formula used is celsius = (temp -32) * 5/9 ")
+
+elif option == "usd-naira":
+    unit = input("What currency do you want to convert from(usd or naira)?: ").lower()
+    amount = float(input("What is the value?: "))
+    if unit == "usd".lower():
+        result = 1362.38 * amount
+        print(f"The rate of {amount} usd to naira is {round(result, 2)}naira ")
+        print("The formula used is usd = 1362.38 * amount ")
+        print(f"Note: Rate is hardcoded at 1 USD = 1,362.38 NGN. May not reflect current market rate.")
+    elif unit == "naira".lower():
+        result = amount / 1362.38
+        print(f"The rate of {amount} naira to usd is ${round(result, 2)} ")
+        print("The formula used is naira = amount / 1362.38")
+        print(f"Note: Rate is hardcoded at 1 USD = 1,362.38 NGN. May not reflect current market rate.")
+elif option == "kg-lb":
+    unit = input("What unit do you want to convert from(kg or lb)?: ").lower()
+    weight = float(input("What is the value?: "))
+    if unit == "kg".lower():
+        result = weight * 2.205
+        print(f"The converted value from {weight}KG to LB is {round(result, 2)}LB")
+        print("The formula used is kg = weight * 2.205  ")
+    elif unit == "lb".lower():
+        result = weight / 2.205
+        print(f"The converted value from {weight}LB to KG is {round(result, 2)}KG")
+        print("The formula used is weight = weight / 2.205 ")
+else:
+    print("Please enter a valid option.")
+    print("You can only choose from km-m, celsius-fahrenheit, usd-naira or kgs-lbs.")
+
