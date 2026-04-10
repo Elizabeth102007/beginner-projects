@@ -1,0 +1,7 @@
+loan = float(input("Enter loan amount: $"))
+amount_paid = float(input("Enter the paid amount: $"))
+balance = loan - amount_paid
+percentage = amount_paid / loan * 100
+
+status = (f"You need to pay up your debt on time as you have ${balance} remaining" if percentage <50 else f"Good job with your payment! We will be expecting the rest of it which is ${balance}")
+print(status)
