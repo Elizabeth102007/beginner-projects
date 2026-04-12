@@ -20,3 +20,8 @@ Converts between km/m, celsius/fahrenheit, USD/NGN, kg/lbs
 - Topics covered : Variables, Data types, Arithmetic operation
 - Used import math module
 - python solving_quadratic_equation.py
+
+### Loan Evaluator
+- Ask user for loan amount and amount payed, which is used to calculate the balance and percentage which is used in printing the output.
+- Topics covered Variables, Data types, conditionals , conditional expression, Arithmetic operation.
+- python loan_evaluator.py
