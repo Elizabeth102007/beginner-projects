@@ -1,0 +1,21 @@
+
+total_price = 0
+goods = []
+while True:
+
+    item = input("Enter the item you would like to buy (q to quit): ").capitalize()
+    if item  == "q".capitalize():
+       break
+    price = float(input("Enter the price of the item you would like to buy:$ "))
+    total_price += price
+    goods.append(item)
+    item_list = (", ".join(goods))
+
+
+print("-----------------------------------------------------------")
+print("----------------------RECEIPT------------------------------")
+print()
+print(f"Items Bought: {item_list}")
+print(f"Total price: ${total_price}")
+print()
+print("--------------------CART CLOSED-----------------------------")
