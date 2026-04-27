@@ -30,3 +30,43 @@ Converts between km/m, celsius/fahrenheit, USD/NGN, kg/lbs
 - Asks user for item preffered to purchase and price, which is used to calculate the total price.
 - Topics covered: Variables, data types, conditionals, arithmetic operations, while loops, lists, string methods.
 - Run: python shopping_cart.py
+
+### CLI Arithmetic Drill Trainer
+
+A command-line math quiz game built in Python.
+Choose your difficulty, answer 10 random math questions, 
+and get a performance report at the end.
+
+ Features
+- Three difficulty levels: Easy, Medium, Hard
+- Random questions using addition, subtraction, multiplication and division
+- Tracks correct and wrong answers per session
+- Times each question and calculates average response time
+- Shows wrong answers with correct solutions at end of session
+
+ How To Run
+python arithmetic_drill.py
+
+ How It Works
+1. Choose difficulty (easy / medium / hard)
+2. Answer 10 randomly generated math questions
+3. See your score, accuracy and average response time
+4. Review questions you got wrong
+
+ Difficulty Levels
+| Level | Number Range |
+|-------|-------------|
+| Easy | 1 - 10 |
+| Medium | 1 - 100 |
+| Hard | 1 - 1000 |
+
+ Topics Covered
+- Control flow (if/elif/else)
+- Loops (for loop)
+- Random module
+- Time module
+- Input validation
+
+ Project Status:
+Built during Python fundamentals learning phase.
+Refactor planned after learning functions.
