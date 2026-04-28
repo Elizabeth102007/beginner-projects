@@ -70,3 +70,37 @@ python arithmetic_drill.py
  Project Status:
 Built during Python fundamentals learning phase.
 Refactor planned after learning functions.
+
+### Personal Profile Card Generator
+
+A command-line Python program that generates a formatted 
+profile card using functions.
+
+  Features
+- Displays full name with optional title
+- Shows age, country and hobbies
+- Lists skills with proficiency levels
+
+ How To Run
+python profile_card.py
+
+ Example Output
+===== PROFILE CARD =====
+Name: Dr. Elizabeth Smith
+------------------------
+Age: 17 | Country: France
+Hobbies: cooking, music, reading
+------------------------
+Skills:
+  - Python: Beginner
+  - Github: Beginner
+  - Vscode: Beginner
+===============================
+
+Topics covered
+- Functions
+- lists
+- String methods
+- Conditionals
+
+
