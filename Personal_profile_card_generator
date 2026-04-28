@@ -1,0 +1,35 @@
+def personal_info( first_name, last_name, title=""):
+    first_name = first_name.capitalize()
+    last_name = last_name.capitalize()
+    title = title.capitalize()
+
+    print("--------------PROFILE CARD-------------")
+    if title == "":
+        print(f"Name: {first_name} {last_name}")
+    else:
+        print(f"Name: {title}. {first_name} {last_name}")
+    print("----------------------------------------")
+
+def important_info(age, country, *args):
+    print(f"Age: {age} | Country: {country}")
+    imfo = []
+    for arg in args:
+        imfo.append(arg)
+    joined = ", ".join(imfo)
+    print(f"Hobbies: {joined}")
+    print("-------------------------------------------")
+
+def skills(**kwargs):
+    print("Skills:")
+    for key, value in kwargs.items():
+        print(f"  -{key}: {value}")
+    print("--------------------------------------------")
+    print("---------------------------------------------")
+
+def main():
+    personal_info(  "Elizabeth", "Smith", "dr")
+    important_info( 17, "France", "cooking", "music", "reading" )
+    skills(Python= "Beginner",Github= "Beginner", Vscode= "Beginner" )
+if __name__ == "__main__":
+    main()
+
