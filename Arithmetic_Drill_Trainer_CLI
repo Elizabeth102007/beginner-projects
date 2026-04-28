@@ -7,7 +7,7 @@ score = 0
 times = []
 wrong_answers = []
 
-difficulty = input("Enter your preferred difficulty(easy, medium, hard): ").lower
+difficulty = input("Enter your preferred difficulty(easy, medium, hard): ").lower()
 
 operation = ["+", "-", "/", "*"]
 operations = random.choice(operation)
