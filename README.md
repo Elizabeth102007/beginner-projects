@@ -103,4 +103,7 @@ Topics covered
 - String methods
 - Conditionals
 
+  ### Arithmetic Drill Trainer CLI v2
+  Refactored using functions after completing functions topic.
+
 
