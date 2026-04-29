@@ -1,0 +1,89 @@
+import random
+import time
+
+
+def get_range(difficulty):
+    if difficulty == "easy":
+        return 10
+    elif difficulty == "medium":
+        return 100
+    elif difficulty == "hard":
+        return 1000
+
+
+def generate_question(range_max):
+    operations = ["+", "-", "/", "*"]
+    operation = random.choice(operations)
+    num_1 = random.randint(1, range_max)
+    num_2 = random.randint(1, range_max)
+
+    if operation == "+":
+        correct_answer = num_1 + num_2
+    elif operation == "-":
+        correct_answer = num_1 - num_2
+    elif operation == "/":
+        while num_2 == 0:
+            num_2 = random.randint(1, range_max)
+        num_1 = num_2 * random.randint(1, range_max)
+        correct_answer = num_1 // num_2
+    elif operation == "*":
+        correct_answer = num_1 * num_2
+
+    return num_1, num_2, operation, correct_answer
+
+
+def ask_question(num_1, num_2, operation):
+    print(f"Question: {num_1} {operation} {num_2}")
+    start = time.time()
+    answer = int(input("Answer: "))
+    end = time.time()
+    time_taken = end - start
+    return answer, time_taken
+
+
+def check_answer(answer, correct_answer):
+    if answer == correct_answer:
+        print("Correct!")
+        return True
+    else:
+        print("Incorrect!")
+        return False
+
+
+def show_summary(correct, times, wrong_answers):
+    score = correct * 2
+    average_time = sum(times) / len(times)
+    print(f"\nScore: {score} points out of 20")
+    print(f"Correct: {correct}")
+    print(f"Wrong: {len(wrong_answers)}")
+    print(f"Accuracy: {correct * 10}%")
+    print(f"Average time per question: {round(average_time, 2)} seconds")
+    if wrong_answers:
+        print("\nQuestions you got wrong:")
+        for item in wrong_answers:
+            print(item)
+
+
+def main():
+    correct = 0
+    times = []
+    wrong_answers = []
+
+    difficulty = input("Enter difficulty (easy, medium, hard): ").lower()
+    range_max = get_range(difficulty)
+
+    for _ in range(10):
+        num_1, num_2, operation, correct_answer = generate_question(range_max)
+        answer, time_taken = ask_question(num_1, num_2, operation)
+        is_correct = check_answer(answer, correct_answer)
+
+        if is_correct:
+            correct += 1
+        else:
+            wrong_answers.append(f"{num_1} {operation} {num_2} = {correct_answer} (you said {answer})")
+
+        times.append(time_taken)
+
+    show_summary(correct, times, wrong_answers)
+if __name__ == "__main__":
+    main()
