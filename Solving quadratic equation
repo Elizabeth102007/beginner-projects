@@ -1,0 +1,14 @@
+# Solving quadratic equation using quadratic formula
+
+# import math module
+import math
+
+a = int(input("Enter the co-efficient a: "))
+b = int(input("Enter the co-efficient b: "))
+c = int(input("Enter the co-efficient c: "))
+
+
+x1 = (-b + math.sqrt(pow(b, 2) - 4 * a * c)) / (2 * a)
+x2 = (-b - math.sqrt(pow(b, 2) - 4 * a * c)) / (2 * a)
+
+print(f"The roots are {x1} and {x2} ")

@@ -1,0 +1,48 @@
+import math
+
+operator = input("Select one of the following operators for calculation: +, -, *, /, //, %, **, √: ")
+
+if operator == "**":
+    num3 = int(input("Enter the base : "))
+    num4 = int(input("Enter the exponent : "))
+    result = num3 ** num4
+    print(result)
+
+if operator == "√":
+    num5 = int(input("Enter a number: "))
+    result = math.sqrt(num5)
+    print(result)
+
+
+num1 = float(input("Enter the first number: "))
+num2 = float(input("Enter the second number: "))
+
+if operator == "+":
+    result = num1 + num2
+    print(result)
+
+elif operator == "-":
+    result = num1 - num2
+    print(result)
+
+elif operator == "*":
+    result = num1 * num2
+    print(result)
+
+elif operator == "/":
+    result = num1 / num2
+    print(result)
+
+elif operator == "//":
+    result = num1 // num2
+    print(result)
+
+elif operator == "%":
+    result = num1 % num2
+    print(result)
+
+elif operator == "**":
+    num3 = int(input("Enter the base : "))
+    num4 = int(input("Enter the exponent : "))
+    result = num3 ** num4
+    print(result)
