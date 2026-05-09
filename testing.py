@@ -1,16 +1,7 @@
-def no_shouting(uppers):
-    new_list = []
+games = ["rocket league", "dream league", "sudoku", "fiest"]
 
-    for upper in uppers:
-        if not upper.isupper():
-            new_list.append(upper)
-    return new_list
-
-if __name__ == '__main__':
-   print(no_shouting(["ABC", "def", "UPPER", "ANOTHERUPPER", "lower", "another lower", "Capitalized"]))
-
-
-
+compressed = [f"Number {index}: {game.title()}" for index, game in enumerate(games, start=1)]
+print(compressed)
 
 
 
