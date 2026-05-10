@@ -106,7 +106,7 @@ Topics covered
   ### Arithmetic Drill Trainer CLI v2
   Refactored using functions after completing functions topic.
 
-### CLI Personal Budget Tracker
+### CLI Personal Finance Tracker
 
 A command-line budget management tool built in Python.  
 Set spending limits per category, log income and expenses,  
@@ -126,8 +126,7 @@ and get a full financial breakdown with savings rate tracking.
 
  How To Run
 
-python budget_tracker.py
-
+python finance_tracker.py
 
   How It Works
 
@@ -182,11 +181,26 @@ python budget_tracker.py
 - No input validation on transaction type or category name (typos will break logic)
 - Budget categories are fixed at startup and cannot be edited mid-session
 
+### Student Course Manager
+   This is exercise containing three university department, each with a list of enrolled students.
+  
+  Task Covered
+- Find students enrolled in ALL three departments simultaneously
+- Find students enrolled in computer science OR medicine but not both
+- Find students enrolled in computer science but NOT in engineering
+- Find students enrolled in at least one department (all unique students)
+- Find students enrolled in exactly one department only (not in any overlap)
+- Check if medicine and engineering share any students — print True or False
+- Add "Blessing" to computer science, remove "Bob" from medicine
+- Find all students NOT in computer science from the full student population
+
+Topics Covered
+- Sets
+- Conditional expression
+
+How To Run
+python student_course_manager.py
 
 
- Project Status
-
-Built during Python fundamentals learning phase.  
-Persistence (file I/O or database) and input validation planned as next improvements.
 
 
