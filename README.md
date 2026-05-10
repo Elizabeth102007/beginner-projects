@@ -106,4 +106,87 @@ Topics covered
   ### Arithmetic Drill Trainer CLI v2
   Refactored using functions after completing functions topic.
 
+### CLI Personal Budget Tracker
+
+A command-line budget management tool built in Python.  
+Set spending limits per category, log income and expenses,  
+and get a full financial breakdown with savings rate tracking.
+
+
+  Features
+
+- Set custom budget limits across 8 spending categories
+- Log income and expense transactions with descriptions
+- View running balance (income, expenses, net)
+- Full transaction history with type, category, and amount
+- Spending breakdown by category with percentage of total expenses
+- Over-budget alerts per category
+- Savings rate calculation as a percentage of income
+
+
+ How To Run
+
+python budget_tracker.py
+
+
+  How It Works
+
+1. Set your budget limits for each category at startup
+2. Choose an action from the menu (add transaction, view balance, etc.)
+3. Log income or expense transactions with category and description
+4. View your balance, history, or full breakdown at any time
+5. Exit when done — session data is not persisted between runs
+
+
+
+ Menu Options
+
+| Option | Action |
+|--------|--------|
+| 1 | Add a transaction |
+| 2 | Show balance |
+| 3 | Show transaction history |
+| 4 | Show spending breakdown |
+| 5 | Quit |
+
+
+
+ Budget Categories
+
+| Category | Description |
+|----------|-------------|
+| Housing | Rent, mortgage |
+| Utilities | Electric, water, internet |
+| Transportation | Fuel, transit, car payments |
+| Food | Groceries, dining |
+| Health | Medical, pharmacy |
+| Personal Care | Hygiene, grooming |
+| Lifestyle | Clothing, subscriptions |
+| Leisure | Entertainment, hobbies |
+
+
+
+  Topics Covered
+
+- Functions and modular code structure
+- Dictionaries and lists
+- Loops and conditionals
+- Input validation and type casting
+- Basic financial logic (balance, savings rate, category totals)
+
+
+
+  Known Limitations
+
+- Data is not saved — all transactions are lost when the program exits
+- No input validation on transaction type or category name (typos will break logic)
+- Budget categories are fixed at startup and cannot be edited mid-session
+
+
+
+ Project Status
+
+Built during Python fundamentals learning phase.  
+Persistence (file I/O or database) and input validation planned as next improvements.
+
 
