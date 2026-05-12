@@ -182,7 +182,7 @@ python finance_tracker.py
 - Budget categories are fixed at startup and cannot be edited mid-session
 
 ### Student Course Manager
-   This is exercise containing three university department, each with a list of enrolled students.
+   This is an exercise containing three university department, each with a list of enrolled students.
   
   Task Covered
 - Find students enrolled in ALL three departments simultaneously
