@@ -1,4 +1,4 @@
-# CLI Projects — Python Fundamentals
+git # CLI Projects — Python Fundamentals
 
 A collection of CLI projects built while learning Python fundamentals.
 
