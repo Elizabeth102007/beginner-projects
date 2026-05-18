@@ -106,7 +106,7 @@ Topics covered
   ### Arithmetic Drill Trainer CLI v2
   Refactored using functions after completing functions topic.
 
-### CLI Personal Finance Tracker
+### Personal Finance Tracker CLI
 
 A command-line budget management tool built in Python.  
 Set spending limits per category, log income and expenses,  
@@ -200,6 +200,51 @@ Topics Covered
 
 How To Run
 python student_course_manager.py
+
+
+### Student Performance Analyzer CLI
+
+A command-line student performance analysis tool built in Python.
+
+Input student grades across multiple subjects and get a full performance breakdown including rankings, weighted GPA, and subject-level insights.
+
+Features
+- Stores multiple students with multiple subject grades
+- Computes per-student average, median, highest, lowest score and pass/fail status
+- Ranks students on a leaderboard with a visual bar chart
+- Calculates weighted GPA with subject-specific credit points
+- Identifies students failing 2 or more subjects using sets
+- Shows class average per subject
+- Flags subjects where the majority of students are failing
+
+How To Run
+
+python student_performance_analyzer.py
+
+
+How It Works
+1. Choose an option from the menu
+2. View students failing 2+ subjects
+3. View subject averages and flagged subjects
+4. View the full ranked leaderboard with stats
+
+Menu Options
+| Option | Description |
+|--------|-------------|
+| 1 | Show failing students |
+| 2 | Show subject averages and flagged subjects |
+| 3 | Show ranked leaderboard |
+| 4 | Quit |
+
+Topics Covered
+- Data structures (dicts, lists, sets)
+- Functions and modular design
+- Sorting with lambda
+- String formatting and f-strings
+- Manual mean, median and weighted GPA calculation
+
+Project Status:
+Built during Python fundamentals learning phase as a data structures capstone project.
 
 
 
