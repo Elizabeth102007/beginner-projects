@@ -246,6 +246,23 @@ Topics Covered
 Project Status:
 Built during Python fundamentals learning phase as a data structures capstone project.
 
+### phone_object_practice
+An exercise used to practice classes, objects, and methods for the first time
+
+How It Works
+
+It has a module name pop_module which contain the class and the methods used by the objects to call and perform the functions of the method and the class
+
+How To Run
+
+phone_object_practice.py
+
+Topics Covered
+- Classes
+- Objects
+- Functions
+
+
 
 
 
