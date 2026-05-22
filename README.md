@@ -255,13 +255,25 @@ It has a module name pop_module which contain the class and the methods used by 
 
 How To Run
 
-phone_object_practice.py
+python phone_object_practice.py
 
 Topics Covered
 - Classes
 - Objects
 - Functions
 
+### Employee_information
+An exercise used to practice class variables and instance variables
+
+How To Run 
+
+python employee_information.py
+
+Topics Covered
+- Classes
+- Objects
+- Functions
+- Format specifier
 
 
 
