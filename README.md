@@ -273,7 +273,7 @@ Topics Covered
 - Classes
 - Objects
 - Functions
-- Format specifier
+- Format specifiers
 
 
 
