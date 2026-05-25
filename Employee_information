@@ -18,9 +18,9 @@ employee4 = Employee("Connie", 27,"Project Manager", 28000)
 print("------------------------------------------------")
 print(f"-----------{Employee.company_name}-------------")
 print(f"Number of employees : {Employee.num_of_employees}")
-print(f"Name: {employee1.name} , Age: {employee1.age}, Position: {employee1.position}, Salary: {employee1.salary:,}")
-print(f"Name: {employee2.name} , Age: {employee2.age}, Position: {employee2.position}, Salary: {employee2.salary:,}")
-print(f"Name: {employee3.name} , Age: {employee3.age}, Position: {employee3.position}, Salary: {employee3.salary:,}")
-print(f"Name: {employee4.name} , Age: {employee4.age}, Position: {employee4.position}, Salary: {employee4.salary:,}")
+print(f"Name: {employee1.name} , Age: {employee1.age}, Position: {employee1.position}, Salary: ${employee1.salary:,}")
+print(f"Name: {employee2.name} , Age: {employee2.age}, Position: {employee2.position}, Salary: ${employee2.salary:,}")
+print(f"Name: {employee3.name} , Age: {employee3.age}, Position: {employee3.position}, Salary: ${employee3.salary:,}")
+print(f"Name: {employee4.name} , Age: {employee4.age}, Position: {employee4.position}, Salary: ${employee4.salary:,}")
 
 
