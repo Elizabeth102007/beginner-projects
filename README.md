@@ -276,7 +276,7 @@ Topics Covered
 - Format specifiers
 
 ### Bank Account System
-This is a project built like a real bak account, which contains withdraw, deposit, the ability to check balance and also get account info printed.
+This is a project built like a real bank account, which contains withdraw, deposit, the ability to check balance and also get account info printed.
 
 How It Works
 - It contians a general bank account, savings account, and a student account
