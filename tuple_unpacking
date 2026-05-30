@@ -1,0 +1,15 @@
+class Person:
+
+   def __init__(self, name: str, email: str):
+       self.name = name
+       self.email = email
+
+   def update_email_domain(self, new_domain: str):
+       local, _ = self.email.split("@")
+       self.email = f"{local}@{new_domain}"
+   def __str__(self):
+       return f"Name: {self.name.title()} | Email address: ({self.email})"
+
+p = Person("mike", "mike@gmail.com")
+p.update_email_domain("edu.com")
+print(p)

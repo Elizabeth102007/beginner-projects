@@ -1,0 +1,42 @@
+class Vehicle:
+    def __init__(self, make: str, model: str, year: int):
+        self.make = make
+        self.model = model
+        self.year = year
+    
+    def start_engine(self):
+        print(f"{self.make} {self.model} engine started")
+    
+    def __str__(self):
+        return f"Car brand: {self.make} | Model: {self.model} | Year:  {self.year}"
+
+class Car(Vehicle):
+    def __init__(self, make, model, year, num_doors):
+        super().__init__(make, model, year)
+        self.num_doors = num_doors
+    
+    def __str__(self):
+        vehicle_str = super().__str__()
+        return f"{vehicle_str} | Number of doors: {self.num_doors}"
+
+class ElectricCar(Car):
+    def __init__(self, make, model, year, num_doors, battery_range):
+        super().__init__(make, model, year, num_doors)
+        self.battery_range = battery_range
+    
+    def start_engine(self):
+        print(f"No engine - {self.make} {self.model} running on battery")
+    
+    def __str__(self):
+        car_str = super().__str__()
+        return f"{car_str} | Battery range: {self.battery_range} KWh"
+
+car = Car("Toyota", "Corolla", 2026, 4,)
+print(car)
+car.start_engine()
+electric = ElectricCar("Toyota", "Corolla", 2026, 4, 5)
+print(electric)
+electric.start_engine()
+    
+    
+    

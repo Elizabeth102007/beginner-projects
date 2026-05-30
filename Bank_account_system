@@ -1,0 +1,89 @@
+class BankAccount:
+    def __init__(self, owner: str, balance: int):
+        self.owner = owner
+        self.__balance = balance
+
+    def deposit(self, amount):
+        if amount <= 0:
+            raise ValueError ("Amount for deposit can't be less than or equals to zero")
+        else:
+            self.__balance +=amount
+    
+    def withdraw(self, amount):
+        if amount > self.__balance:
+            raise ValueError ("Your balance is lower than your amount of withdraw")
+        else:
+            self.__balance -=amount
+    
+    @property
+    def balance(self):
+        return self.__balance
+    
+    
+    def __str__(self):
+        return f"Account owner: {self.owner.title()} | Account balance: ${self.balance}"
+    
+
+class SavingsAccount(BankAccount):
+    def __init__(self, owner, balance, interest_rate):
+        super().__init__(owner, balance)
+        self.__interest_rate = interest_rate
+    
+    @property
+    def interest_rate(self):
+        return self.__interest_rate
+    
+
+    def apply_interest(self):
+        interest = (self.balance * self.interest_rate/ 100)
+        self.deposit(interest)
+        return self.balance
+
+    
+    def __str__(self):
+        bank_str = super().__str__()
+        return f"{bank_str} | Interst rate : {self.interest_rate}%"
+
+class StudentAccount(BankAccount):
+    def __init__(self, owner, balance, school_name):
+        super().__init__(owner, balance)
+        self.school_name = school_name
+
+    def withdraw(self, amount):
+        if amount <= 100:
+            super().withdraw(amount)
+        else:
+            raise ValueError ("You have a withdrawal limit of $100")
+    
+    def __str__(self):
+        bank_str = super().__str__()
+        return f"{bank_str} | School : {self.school_name.title()}"
+
+bank_account = BankAccount("elizabeth jennifer", 500)
+bank_account.deposit(200)
+print(bank_account.balance)
+print(bank_account)
+
+bank_account.withdraw(100)
+print(bank_account.balance)
+
+savings = SavingsAccount("jasmine pella", 800, 8)
+savings.deposit(200)
+print(savings.balance)
+print(savings)
+
+savings.apply_interest()
+print(savings.balance)
+
+student = StudentAccount("philomena smith", 1200, "amherst college")
+student.withdraw(100)
+print(student.balance)
+print(student)
+
+
+
+
+
+
+        
+
