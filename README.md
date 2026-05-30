@@ -275,6 +275,30 @@ Topics Covered
 - Functions
 - Format specifiers
 
+### Bank Account System
+This is a project built like a real bak account, which contains withdraw, deposit, the ability to check balance and also get account info printed.
+
+How It Works
+- It contians a general bank account, savings account, and a student account
+- Student account has a withrawal limit of $100
+- Savings account can get an interest
+- Currency is in USD
+
+How To Run
+
+python bank_account_system.py
+
+Topics Covered
+- Classes
+- Objects
+- inheritance
+- Encapsulation
+- Access modifiers
+- Error Handling
+
+
+  
+
 
 
 
