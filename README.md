@@ -296,6 +296,59 @@ Topics Covered
 - Access modifiers
 - Error Handling
 
+### Payment Processing System
+
+This is a payment processing system built using Object-Oriented Programming principles. It allows users to create different payment methods, add them to a transaction, process payments, and generate receipts.
+
+How It Works
+
+Contains multiple payment types:
+
+  - Credit Card Payment
+  - PayPal Payment
+  - Crypto Payment
+  - Bank Transfer
+- Uses an abstract base class to enforce a common payment interface
+- Each payment type implements its own processing and receipt generation logic
+- Sensitive information such as card numbers and bank account numbers are masked
+- Multiple payments can be grouped into a single transaction
+- Transactions can be combined together using operator overloading
+- Total transaction amount is calculated automatically
+
+Features
+
+- Add payments through a command-line interface
+- View all payments in a transaction
+- Process all payments at once
+- Generate receipts for every payment
+- Calculate total transaction value
+- Count payments using - len()
+- Combine transactions using the - + operator
+
+How To Run
+
+
+python payment_system.py
+
+Topics Covered
+
+- Classes
+- Objects
+- Abstract Classes
+- Abstraction
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Method Overriding
+- Operator Overloading
+- Special Methods
+- Type Hints
+- Collections
+- Command Line Interfaces (CLI)
+- Data Masking
+- Object Aggregation
+
+
 
   
 
