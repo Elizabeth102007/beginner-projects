@@ -1,0 +1,42 @@
+from abc import ABC , abstractmethod
+class Sizes(ABC):
+
+    @abstractmethod
+    def sizing(self):
+        pass
+
+class Shirt(Sizes):
+    def __init__(self, chest, neck):
+        self.chest = chest
+        self.neck = neck
+    def sizing(self):
+       return self.chest * self.neck
+
+class Trouser(Sizes):
+    def __init__(self, waist, length):
+        self.waist = waist
+        self.length = length
+    
+    def sizing(self):
+        return self.waist * self.length
+
+class Bra(Sizes):
+    def __init__(self, bust):
+        self.bust = bust
+    
+    def sizing(self):
+        return pow(self.bust, 2) 
+
+class T_Shirt(Shirt):
+    def __init__(self, chest, neck, length):
+        super().__init__(chest, neck)
+        self.length = length
+    
+    def sizing(self):
+        return self.chest * self.length
+
+sizes = [Shirt(15, 12), Trouser(12, 5), Bra(16), T_Shirt(12, 24, 13)]
+
+for size in sizes:
+    print(f"{size.sizing()}cm")
+    
