@@ -95,6 +95,7 @@ Skills:
   - Python: Beginner
   - Github: Beginner
   - Vscode: Beginner
+
 ===============================
 
 Topics covered
@@ -347,6 +348,66 @@ Topics Covered
 - Command Line Interfaces (CLI)
 - Data Masking
 - Object Aggregation
+
+### Bank Account Simulator CLI
+
+This is a console-based banking system built with Python using Object-Oriented Programming (OOP) principles. The application simulates basic banking operations such as creating accounts, making deposits, withdrawing funds, transferring money between accounts, and viewing account information.
+
+How It Works
+
+- Supports both Checking Accounts and Savings Accounts
+- Users can create multiple accounts through a menu-driven interface
+- Funds can be deposited into and withdrawn from accounts
+- Money can be transferred between accounts
+- Savings accounts can calculate both **simple interest** and **compound interest**
+- Interest projections can be viewed for different time periods
+- The bank can generate a report showing total assets across all accounts
+- Currency is represented in USD ($)
+
+Features
+
+- Open new accounts
+- Deposit funds
+- Withdraw funds
+- Transfer money between accounts
+- View account details
+- View all accounts
+- Interest projection for savings accounts
+- Bank-wide asset reports
+
+How To Run
+
+
+python bank_account_simulator_cli.py
+
+Topics Covered
+
+- Classes and Objects
+- Inheritance
+- Encapsulation
+- Method Overriding
+- Properties (@property)
+- Exception Handling
+- Composition
+- Polymorphism
+- Object-Oriented Programming (OOP)
+
+Example Concepts Demonstrated
+
+- A Bank object manages multiple accounts
+- A SavingsAccount inherits from the base Account class
+- Account balances are protected using encapsulation
+- Transactions are validated using error handling
+- Different account types share common behavior while implementing specialized functionality
+
+Future Improvements
+
+- Transaction history
+- Account deletion
+- Data persistence using JSON files
+- Custom savings account interest rates
+- Unit testing
+- Account authentication and security features
 
 
 
