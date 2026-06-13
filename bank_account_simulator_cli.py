@@ -12,8 +12,12 @@ class Account:
             self.__balance +=amount
     
     def withdraw(self, amount):
+        if amount <= 0:
+            raise ValueError("Withdrawal amount must be greater than zero")
+        
         if amount > self.__balance:
             raise ValueError ("Your balance is lower than your amount of withdraw")
+        
         else:
             self.__balance -=amount
     
