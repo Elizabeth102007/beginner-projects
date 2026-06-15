@@ -477,6 +477,90 @@ Future Improvements
 - Unit testing
 - Enhanced user interface
 
+### Student Grade Tracker CLI
+
+This is a console-based student grade management application built with Python. The program allows users to store, manage, search, and delete student academic records while automatically saving data to a CSV file for persistence.
+
+How It Works
+
+- Student records are stored in a CSV file named 'grades.csv'
+- Users can add student information through a menu-driven interface
+- Each student record contains scores for Mathematics, English, and Science
+- Student data is automatically saved after additions and deletions
+- Users can search for specific students by name
+- Student records can be removed from the system
+- The application calculates and displays each student's average score
+- Data remains available between program sessions through CSV storage
+
+Features
+
+- Add student records
+- View all student records
+- Search for a student by name
+- Delete student records
+- Automatic average score calculation
+- Persistent data storage using CSV files
+- Automatic file loading on startup
+- Menu-driven command-line interface
+- Error handling for missing files
+
+How To Run
+
+
+python student_grade_tracker.py
+
+
+Topics Covered
+
+- File Handling
+- CSV File Processing
+- Reading and Writing CSV Files
+- Dictionaries
+- Lists
+- Functions
+- Loops
+- Conditional Statements
+- Exception Handling
+- Data Persistence
+- User Input Validation
+- Command-Line Applications
+
+Example Concepts Demonstrated
+
+- Loading structured data from a CSV file using 'csv.DictReader'
+- Saving data using 'csv.DictWriter'
+- Storing student information as dictionaries
+- Managing collections of records with lists
+- Calculating student averages from subject scores
+- Searching through datasets using iteration
+- Deleting records from a collection
+- Persisting application data between program executions
+- Handling missing files with exception handling
+
+CSV Structure
+
+The application stores data in the following format:
+
+| Name  | Math | English | Science |
+| ----- | ---- | ------- | ------- |
+| Jenny | 85   | 92      | 88      |
+| David | 78   | 81      | 90      |
+
+Future Improvements
+
+- Edit existing student records
+- Calculate class-wide statistics
+- Display highest and lowest scores
+- Generate student report cards
+- Sort students by average score
+- Export reports to PDF
+- Add grade classifications (A, B, C, etc.)
+- Input validation for score ranges
+- Support additional subjects
+- Unit testing
+- Graphical User Interface (GUI)
+- Student ranking system
+
 
 
 
