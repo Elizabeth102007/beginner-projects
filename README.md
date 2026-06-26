@@ -562,6 +562,423 @@ Future Improvements
 - Student ranking system
 
 
+### Expense Tracker CLI
+
+This is a console-based personal finance management system built with Python. The application allows users to track income and expenses, manage category-based budgets, analyze spending habits, generate financial reports, and monitor savings performance through a menu-driven command-line interface.
+
+The system stores transaction data in CSV format and budget settings in JSON format, providing persistent storage between sessions while maintaining data integrity through validation and error handling.
+
+How It Works
+
+* Income and expense transactions are recorded and stored in a CSV file
+* Budget limits are managed separately using a JSON configuration file
+* Transactions are categorized to enable spending analysis and budget tracking
+* The system automatically calculates balances, expenses, income, and savings rates
+* Users can review complete transaction histories
+* Spending can be analyzed by category and compared against budget limits
+* Monthly spending trends can be compared to identify financial patterns
+* Reports can be exported based on categories or date ranges
+* Duplicate transaction detection helps maintain data accuracy
+* Financial data persists between program sessions
+
+Features
+
+* Add income and expense transactions
+* View complete transaction history
+* Track total income, expenses, and balance
+* Create and manage category-based budgets
+* Monitor budget overruns
+* Analyze spending by category
+* Calculate savings rate automatically
+* Compare spending across months
+* Calculate average daily spending
+* Detect duplicate transactions
+* Export filtered financial reports
+* Store transaction data using CSV files
+* Store budget settings using JSON files
+* Data validation and error handling
+* Menu-driven command-line interface
+
+Financial Categories
+
+The application supports budgeting and expense tracking for the following categories:
+
+* Housing
+* Utilities
+* Transportation
+* Food
+* Health
+* Personal Care
+* Lifestyle
+* Leisure
+
+How To Run
+
+
+python expense_tracker.py
+
+
+# Data Storage
+
+
+Transactions File
+
+All transactions are stored in:
+
+
+transactions.csv
+
+
+Example structure:
+
+| Transaction Type | Category | Amount  | Description | Date       |
+| ---------------- | -------- | ------- | ----------- | ---------- |
+| income           | salary   | 2500.00 | paycheck    | 2026-01-01 |
+| expenses         | food     | 25.50   | lunch       | 2026-01-02 |
+
+Budget File
+
+Budget limits are stored in:
+
+
+budget.json
+
+
+Example structure:
+
+
+{
+  "housing": 1000,
+  "food": 400,
+  "transportation": 200,
+  "utilities": 150
+}
+
+Topics Covered
+
+* File Handling
+* CSV Processing
+* JSON Serialization
+* Dictionaries
+* Lists
+* Functions
+* Exception Handling
+* Data Validation
+* Financial Calculations
+* Date and Time Handling
+* Data Persistence
+* Report Generation
+* Budget Management
+* Statistical Analysis
+* Command-Line Applications
+
+Example Concepts Demonstrated
+
+* Reading and writing structured CSV data using 'csv.DictReader' and 'csv.DictWriter'
+* Persisting application settings using JSON
+* Implementing robust error handling for corrupted or missing files
+* Validating user input before processing financial data
+* Calculating balances from income and expense records
+* Computing savings rates and spending percentages
+* Aggregating financial data by category and month
+* Detecting duplicate records using composite keys
+* Generating custom reports based on filters
+* Working with dates using Python's 'datetime' module
+* Managing application state across multiple program executions
+
+# Financial Analytics Included
+
+Balance Tracking
+
+The system automatically calculates:
+
+* Total Income
+* Total Expenses
+* Current Balance
+
+Spending Breakdown
+
+Users can view:
+
+* Category spending totals
+* Percentage of total expenses by category
+* Budget overages by category
+
+Savings Rate Analysis
+
+The application calculates:
+
+
+(Total Income - Total Expenses) / Total Income × 100
+
+to determine the user's savings rate.
+
+Monthly Spending Comparison
+
+The system compares spending between the two most recent months and reports:
+
+* Spending increases
+* Spending decreases
+* Percentage change
+
+Average Daily Spending
+
+The application calculates average spending per day based on recorded expense activity.
+
+Report Exporting
+
+Users can generate detailed text reports filtered by:
+
+* Category
+* Date Range
+
+Generated reports include:
+
+* Transaction details
+* Income totals
+* Expense totals
+* Date information
+* Category summaries
+
+
+Reports are automatically timestamped to prevent accidental overwrites.
+
+Error Handling
+
+The application includes protection against:
+
+* Missing transaction files
+* Missing budget files
+* Corrupted JSON data
+* Invalid CSV records
+* Invalid transaction amounts
+* Invalid date formats
+* Empty datasets
+* Division-by-zero calculations
+* Failed file operations
+
+Future Improvements
+
+* Transaction editing functionality
+* Transaction deletion functionality
+* Recurring income and expense tracking
+* Financial goal tracking
+* Savings target projections
+* Budget recommendation engine
+* Data visualization with charts and graphs
+* Monthly and yearly financial summaries
+* Multi-user support
+* Currency selection
+* Import and export to Excel
+* SQLite database integration
+* Unit testing
+* Graphical User Interface (GUI)
+* Authentication and account security
+
+Learning Outcomes
+
+This project demonstrates how to build a real-world finance application using Python while applying concepts such as file persistence, data validation, financial calculations, reporting systems, exception handling, and modular program design.
+
+It serves as an excellent intermediate-level Python project that bridges the gap between basic CRUD applications and more advanced data-driven software systems.
+
+
+### Weather API Retry Simulator CLI
+
+This is a console-based weather service simulator built with Python. The application simulates interactions with an external weather API while demonstrating robust error handling, retry mechanisms, logging, and session analytics.
+
+The program randomly generates successful responses and various types of failures to mimic real-world API behavior, allowing users to explore how resilient applications handle unreliable external services.
+
+How It Works
+
+- Users enter the name of a city to request weather information
+- The application simulates an API call using randomized outcomes
+- Requests may succeed or fail with different types of errors
+- Network-related failures are automatically retried
+- Data-related failures terminate the request immediately
+- All errors are recorded in a log file for debugging purposes
+- Session statistics are collected throughout program execution
+- A final report summarizes system performance and reliability metrics
+
+Features
+
+- Simulated weather API requests
+- Randomized success and failure responses
+- Automatic retry mechanism
+- Error categorization
+- Exception handling
+- Error logging to file
+- Session performance tracking
+- Success rate calculations
+- Retry statistics
+- Failure analysis
+- Interactive command-line interface
+
+Error Types Simulated
+
+The application simulates several common API failure scenarios:
+
+- Connection errors
+- Timeout errors
+- Invalid data errors
+- Missing data errors
+- Successful API responses
+
+Retry Strategy
+
+The application implements a retry policy for temporary failures:
+
+- Connection errors are retried automatically
+- Timeout errors are retried automatically
+- A maximum of three attempts is allowed
+- Invalid data errors immediately terminate processing
+- Missing field errors immediately terminate processing
+
+How To Run
+
+
+python weather_retry_simulator.py
+
+
+Example Successful Response
+
+
+----------Weather Forecast-----------
+
+City : London
+
+Temperature : 24
+
+Condition : Windy
+
+Humidity : 0.2
+
+Example Failed Response
+
+
+Attempt 1 failed. Retrying...
+
+Attempt 2 failed. Retrying...
+
+There is an error with the server.
+
+Unable to get weather details
+
+
+Session Analytics
+
+At the end of execution, the application generates a session report containing:
+
+- Total API calls
+- Successful requests
+- Success rate percentage
+- Average retry count
+- Most common failure type
+- Failure breakdown statistics
+
+Example:
+
+
+--------- Session Report ---------
+
+Total API Calls: 25
+
+Successful Requests: 10
+
+Success Rate: 40.00%
+
+Average Retries Before Success: 1.30
+
+Most Common Failure Type: ConnectionError
+
+Failure Breakdown:
+
+ConnectionError: 8
+
+TimeoutError: 4
+
+ValueError: 2
+
+
+Logging
+
+All errors are automatically written to:
+
+
+error.log
+
+
+Example log entry:
+
+
+2026-06-26 18:45:12 - ERROR - Attempt 2 - ConnectionError:
+Could not connect to the weather service
+
+
+Topics Covered
+
+- Exception Handling
+- Custom Retry Logic
+- Error Recovery
+- Logging
+- Random Simulation
+- Dictionaries
+- Lists
+- Functions
+- Global State Management
+- Statistical Analysis
+- Command-Line Applications
+- API Simulation
+- Defensive Programming
+
+Example Concepts Demonstrated
+
+- Simulating external API behavior using random outcomes
+- Handling multiple exception types
+- Implementing retry mechanisms for transient failures
+- Logging application errors using Python's logging module
+- Tracking application performance metrics
+- Calculating success rates and averages
+- Categorizing and aggregating failures
+- Using dictionaries for statistical analysis
+- Building resilient systems that recover from temporary failures
+- Separating recoverable and unrecoverable errors
+
+Software Engineering Concepts Demonstrated
+
+This project demonstrates several patterns commonly used in production systems:
+
+- Retry Pattern
+- Fail Fast Principle
+- Error Classification
+- Fault Tolerance
+- Logging and Monitoring
+- Reliability Metrics
+- Performance Analytics
+- Defensive Programming
+
+Future Improvements
+
+- Exponential backoff retry strategy
+- Configurable retry limits
+- Real weather API integration
+- Response caching
+- Circuit breaker pattern implementation
+- Custom exception classes
+- Multi-city batch requests
+- Report export functionality
+- Graphical performance dashboards
+- Unit testing
+- Asynchronous API requests
+- API response time tracking
+
+Learning Outcomes
+
+This project demonstrates how to build resilient software systems that can tolerate failures when communicating with external services. It introduces concepts commonly used in backend engineering, cloud systems, and API development, including retry strategies, error logging, fault tolerance, and performance monitoring.
+
+It serves as an excellent intermediate Python project for understanding how real-world applications handle unreliable external dependencies.
+
+
+
 
 
   
