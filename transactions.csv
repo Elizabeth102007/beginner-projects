@@ -1,0 +1,6 @@
+transaction_type,category,amount,description,date
+income,salary,5000.0,salary,2026-06-15
+expenses,personal care,200.0,skin care,2026-06-15
+income,food,200.0,lunches,2026-06-19
+income,salary,7000.0,salary,2026-06-19
+expenses,housing,400.0,rent,2026-06-19

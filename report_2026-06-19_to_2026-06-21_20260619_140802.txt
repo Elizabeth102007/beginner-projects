@@ -1,0 +1,25 @@
+==================================================
+EXPENSE REPORT
+==================================================
+
+Date:        2026-06-19
+Type:        Income
+Category:    Food
+Amount:      $200.00
+Description: Lunches
+--------------------------------------------------
+Date:        2026-06-19
+Type:        Income
+Category:    Salary
+Amount:      $7000.00
+Description: Salary
+--------------------------------------------------
+Date:        2026-06-19
+Type:        Expenses
+Category:    Housing
+Amount:      $400.00
+Description: Rent
+--------------------------------------------------
+
+Total income in report:   $7200.00
+Total expenses in report: $400.00

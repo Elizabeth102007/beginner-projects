@@ -1,0 +1,10 @@
+{
+  "housing": 700.0,
+  "utilities": 400.0,
+  "transportation": 200.0,
+  "food": 500.0,
+  "health": 300.0,
+  "personal care": 300.0,
+  "lifestyle": 200.0,
+  "leisure": 200.0
+}

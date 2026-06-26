@@ -1,0 +1,38 @@
+2026-06-25 20:46:26,076 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:46:26,078 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:46:26,078 - ERROR - Invalid data or there is missing field
+2026-06-25 20:47:03,996 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:47:36,347 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:48:23,279 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:48:23,279 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:48:23,279 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:48:33,217 - ERROR - Invalid data or there is missing field
+2026-06-25 20:48:36,481 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:52:55,327 - ERROR - Invalid data or there is missing field
+2026-06-25 20:53:01,771 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:53:01,771 - ERROR - Invalid data or there is missing field
+2026-06-25 20:53:44,296 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:53:44,296 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:53:44,296 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:54:24,227 - ERROR - Invalid data or there is missing field
+2026-06-25 20:54:27,341 - ERROR - Invalid data or there is missing field
+2026-06-25 20:54:28,487 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 20:54:28,488 - ERROR - Invalid data or there is missing field
+2026-06-25 21:00:21,704 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 21:00:21,706 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 21:00:21,714 - ERROR - There is a connection issue or the server is too slow
+2026-06-25 21:04:21,986 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 21:04:56,082 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 21:05:42,883 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 21:05:49,577 - ERROR - Attempt 1 - TimeoutError: Weather server is too slow
+2026-06-25 21:05:49,578 - ERROR - Attempt 2 - ConnectionError: Could not connect to the weather service
+2026-06-25 21:05:49,578 - ERROR - Attempt 3 - TimeoutError: Weather server is too slow
+2026-06-25 21:06:20,311 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 21:06:20,311 - ERROR - ValueError: Invalid data recieved
+2026-06-25 21:06:37,645 - ERROR - Attempt 1 - TimeoutError: Weather server is too slow
+2026-06-25 22:38:30,717 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 22:42:14,540 - ERROR - ValueError: Invalid data recieved
+2026-06-25 22:42:22,343 - ERROR - Attempt 1 - ConnectionError: Could not connect to the weather service
+2026-06-25 22:42:22,343 - ERROR - Attempt 2 - ConnectionError: Could not connect to the weather service
+2026-06-25 22:42:22,343 - ERROR - Attempt 3 - TimeoutError: Weather server is too slow
+2026-06-25 22:42:30,653 - ERROR - ValueError: Invalid data recieved
