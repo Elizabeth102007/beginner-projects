@@ -562,7 +562,7 @@ Future Improvements
 - Student ranking system
 
 
-### Expense Tracker CLI
+### Expense Report System CLI
 
 This is a console-based personal finance management system built with Python. The application allows users to track income and expenses, manage category-based budgets, analyze spending habits, generate financial reports, and monitor savings performance through a menu-driven command-line interface.
 
@@ -615,7 +615,7 @@ The application supports budgeting and expense tracking for the following catego
 How To Run
 
 
-python expense_tracker.py
+python expense_system.py
 
 
 # Data Storage
@@ -976,6 +976,189 @@ Learning Outcomes
 This project demonstrates how to build resilient software systems that can tolerate failures when communicating with external services. It introduces concepts commonly used in backend engineering, cloud systems, and API development, including retry strategies, error logging, fault tolerance, and performance monitoring.
 
 It serves as an excellent intermediate Python project for understanding how real-world applications handle unreliable external dependencies.
+
+
+
+### Course Statistics API Client
+
+This is a Python-based API client application that retrieves and processes course statistics data from the University of Helsinki's mock statistics API. The program demonstrates how to consume REST APIs, parse JSON responses, filter data, and perform statistical calculations.
+
+The application provides two main functionalities: retrieving a list of active courses and generating statistical summaries for individual courses.
+
+How It Works
+
+* The application connects to the University of Helsinki mock statistics API
+* Course data is retrieved using HTTP requests
+* JSON responses are parsed into Python data structures
+* Only active courses are returned when retrieving all courses
+* Course statistics are aggregated across multiple weeks
+* Various metrics, such as total exercises and average hours per student, are calculated
+* SSL certificate verification is handled using the `certifi` package
+
+Features
+
+* Retrieve all active courses
+* Filter inactive courses automatically
+* Calculate total exercises for each course
+* Retrieve detailed statistics for a specific course
+* Calculate total study hours
+* Calculate total completed exercises
+* Determine the maximum number of enrolled students
+* Calculate average study hours per student
+* Calculate average exercises completed per student
+* Process and analyze JSON API responses
+
+How To Run
+
+
+python course_statistics_api.py
+
+
+Example Output
+
+Retrieving Active Courses
+
+
+
+[
+    ('Full Stack Open 2019', 'ofs2019', 2019, 165),
+    ('Docker 2019', 'docker2019', 2019, 36)
+]
+
+
+Retrieving Course Statistics
+
+
+{
+    'weeks': 8,
+    'students': 220,
+    'hours': 6730,
+    'hours_average': 30,
+    'exercises': 15230,
+    'exercises_average': 69
+}
+
+
+Topics Covered
+
+* REST APIs
+* HTTP Requests
+* JSON Processing
+* Data Aggregation
+* Statistical Calculations
+* List Comprehensions
+* Dictionaries
+* Tuples
+* Functions
+* String Formatting
+* SSL Certificate Verification
+* External Libraries
+
+Example Concepts Demonstrated
+
+* Making HTTP requests using 'urllib.request'
+* Parsing JSON responses using Python's 'json' module
+* Working with external APIs
+* Filtering data based on specific conditions
+* Performing aggregate calculations on datasets
+* Using generator expressions
+* Computing averages and totals
+* Finding maximum values in collections
+* Structuring data using tuples and dictionaries
+* Handling secure HTTPS connections using 'certifi'
+
+API Endpoints Used
+
+Retrieve All Courses
+
+https://studies.cs.helsinki.fi/stats-mock/api/courses
+
+
+Returns information about all available courses, including whether they are currently active.
+
+Retrieve Course Statistics
+
+
+https://studies.cs.helsinki.fi/stats-mock/api/courses/{course_name}/stats
+
+
+Returns weekly statistics for a specific course.
+
+
+Statistical Metrics Calculated
+
+For each course, the application calculates:
+
+* Number of weeks
+* Maximum number of enrolled students
+* Total study hours
+* Average study hours per student
+* Total completed exercises
+* Average exercises completed per student
+
+Learning Outcomes
+
+This project demonstrates how to interact with REST APIs using Python while applying concepts such as JSON parsing, data filtering, aggregation, and statistical analysis. It provides practical experience with external data sources and illustrates how Python can be used to transform raw API responses into meaningful information.
+
+It serves as an excellent introductory project for learning API consumption, data processing, and basic analytics in Python.
+
+
+### String Manipulation Utilities
+
+This is a small Python utility module that demonstrates common string manipulation techniques. The program provides functions for changing character case, splitting strings into equal parts, and removing special characters from text.
+
+How It Works
+
+* The application accepts a string as input
+* Character cases can be swapped from uppercase to lowercase and vice versa
+* Strings can be split into two halves
+* Special characters and punctuation can be removed while preserving letters, numbers, and spaces
+
+Features
+
+* Change the case of characters
+* Split strings into two parts
+* Remove special characters
+* Preserve alphanumeric characters and spaces
+
+### How To Run
+
+
+
+python string_utilities.py
+
+
+Topics Covered
+
+* Strings
+* String Methods
+* String Slicing
+* Loops
+* Conditional Statements
+* Lists
+* Functions
+
+Example Concepts Demonstrated
+
+* Using Python's 'swapcase()' method
+* Splitting strings with slicing operations
+* Iterating through characters in a string
+* Validating characters with 'isalpha()' and 'isdigit()'
+* Building and joining lists of characters
+* Processing and cleaning text data
+
+Example Output
+
+
+MEAn
+('I feel so', ' happy today')
+This is a test lets see how it goes11
+
+
+Learning Outcomes
+
+
+This project demonstrates fundamental string processing techniques in Python and provides practical experience with text manipulation, character validation, and string operations.
 
 
 
