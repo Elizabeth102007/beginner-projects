@@ -1,5 +1,5 @@
 import csv
-
+# writing
 body_goals = [["Name", "Age", "Target_body_weight"], 
               ["Jenny", 25, 55], 
               ["Olivia", 40, 57], 
@@ -16,7 +16,7 @@ try:
 
 except FileExistsError:
     print("That file do exists")
-
+# reading
 with open(file_path, "r") as f:
     content = csv.reader(f)
     for line in content:

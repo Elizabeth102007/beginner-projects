@@ -1,5 +1,5 @@
 import json
-
+# writing
 purpose = {"prosperity": "important", 
            "hapinness": "With God Help", 
            "freedom": "Prayer is the key"}
@@ -13,7 +13,7 @@ try:
 except FileExistsError:
     print("That file do exists")
 
-
+# reading
 with open(file_path, "r") as f:
     content = json.load(f)
     print(content)

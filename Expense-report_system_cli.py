@@ -13,12 +13,10 @@ BUDGET_CATEGORIES = [
 REQUIRED_FIELDS = ["transaction_type", "category", "amount", "description", "date"]
 
 
-# ----------------------------- LOAD / SAVE -----------------------------
+# LOAD / SAVE
 
 def load_transactions():
-    """Load transactions from CSV. Converts amount to float and skips
-    malformed rows (missing fields, bad amount) with a warning instead
-    of crashing. Returns [] if the file doesn't exist or is unreadable."""
+    
     transactions = []
     try:
         with open(transaction_file, "r", newline="") as file:
@@ -56,8 +54,7 @@ def save_transactions(transactions):
 
 
 def load_budget():
-    """Load budget.json. Returns {} if missing, invalid JSON, or not
-    a JSON object — instead of crashing."""
+    
     try:
         with open(budget_file, "r") as file:
             data = json.load(file)
@@ -96,7 +93,7 @@ def get_budget_limit():
     return budget_limit
 
 
-# ----------------------------- TRANSACTIONS -----------------------------
+# TRANSACTIONS
 
 def add_transaction(transactions):
     transaction_type = input("Is this an income or expenses?: ").strip().lower()
@@ -195,11 +192,10 @@ def show_breakdown(transactions, budget_limit):
         print(f"Savings rate: {savings_rate:.2f}%")
 
 
-# ----------------------------- NEW: DUPLICATES -----------------------------
+# NEW: DUPLICATES 
 
 def check_duplicates(transactions):
-    """Detect transactions with identical type, category, amount,
-    description, and date. Warns but does not delete anything."""
+    
     seen = {}
     found_any = False
     for t in transactions:
@@ -216,10 +212,10 @@ def check_duplicates(transactions):
         print("No duplicate transactions found.")
 
 
-# ----------------------------- NEW: MONTHLY ANALYSIS -----------------------------
+# NEW: MONTHLY ANALYSIS
 
 def monthly_totals(transactions):
-    """Groups expenses by YYYY-MM prefix of date. Returns {month: total}."""
+   
     totals = {}
     for t in transactions:
         if t["transaction_type"] == "expenses":
@@ -229,10 +225,7 @@ def monthly_totals(transactions):
 
 
 def compare_months(transactions):
-    """Compares the two most recent months THAT HAVE EXPENSE DATA.
-    Note: 'most recent' is based on which months appear in your data,
-    not strictly consecutive calendar months. If you have expenses in
-    Jan and Mar but none in Feb, this compares Jan vs Mar."""
+    
     totals = monthly_totals(transactions)
     months = sorted(totals.keys())
 
@@ -263,8 +256,7 @@ def compare_months(transactions):
 
 
 def average_daily_spend(transactions):
-    """Total expenses divided by number of unique days that have at
-    least one expense transaction (not total calendar days)."""
+    
     total_expenses = 0
     unique_days = set()
     for t in transactions:
@@ -281,7 +273,7 @@ def average_daily_spend(transactions):
     print(f"Across {len(unique_days)} day(s) with recorded expenses: ${avg:.2f}/day")
 
 
-# ----------------------------- NEW: EXPORT -----------------------------
+# NEW: EXPORT
 
 def export_report(transactions):
     if not transactions:
@@ -347,12 +339,10 @@ def export_report(transactions):
     print(f"Report exported successfully to '{filename}' ({len(filtered)} transaction(s)).")
 
 
-# ----------------------------- NEW: BUDGET MANAGEMENT -----------------------------
+# NEW: BUDGET MANAGEMENT
 
 def set_budget(budget):
-    """Lets the user set/update a limit per category. Saves to
-    budget.json after every single change (not just at the end), so
-    a crash mid-edit doesn't lose prior edits in this session."""
+    
     print("----------- SET BUDGET LIMITS -----------")
     print("Current budget limits:")
     if budget:
@@ -374,13 +364,13 @@ def set_budget(budget):
             print(f"  Invalid number. Keeping previous value for {cat}.")
             continue
         budget[cat] = new_limit
-        save_budget(budget)
-        print(f"  Saved: {cat.capitalize()} budget set to ${new_limit:.2f}.")
+    save_budget(budget)
+    print(f"  Saved: {cat.capitalize()} budget set to ${new_limit:.2f}.")
 
     return budget
 
 
-# ----------------------------- MENU / MAIN -----------------------------
+# MENU / MAIN
 
 def show_menu():
     print("\n========== EXPENSE REPORT SYSTEM ==========")
@@ -398,12 +388,12 @@ def show_menu():
 
 def main():
     transactions = load_transactions()
-    check_duplicates(transactions)
-
+    
     budget_limit = load_budget()
     if budget_limit == {}:
         budget_limit = get_budget_limit()
         save_budget(budget_limit)
+    check_duplicates(transactions)
 
     while True:
         show_menu()
