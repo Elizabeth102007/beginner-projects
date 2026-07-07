@@ -1161,6 +1161,103 @@ Learning Outcomes
 This project demonstrates fundamental string processing techniques in Python and provides practical experience with text manipulation, character validation, and string operations.
 
 
+### File System Analyzer CLI
+
+This is a console-based file system analysis tool built with Python. The application scans a user-specified folder, analyzes its files, groups them by extension, identifies old and duplicate files, and exports a detailed CSV report.
+
+The project demonstrates how Python's standard library can be used to automate file system inspection and generate useful reports without relying on external packages.
+
+### How It Works
+
+* The user provides a folder path as a command-line argument
+* The application scans all files in the specified folder
+* Files are grouped according to their extensions
+* The total size of each file type is calculated
+* Files older than 30 days are identified
+* Duplicate files are detected based on filename and file size
+* A summary report is displayed in the terminal
+* A detailed CSV report is generated inside the scanned folder
+
+### Features
+
+* Analyze files in any folder
+* Group files by extension
+* Calculate total storage used by each file type
+* Detect files older than 30 days
+* Identify duplicate files
+* Display a formatted console report
+* Export analysis results to a CSV file
+* Human-readable file size formatting
+* Command-line interface using arguments
+* File system validation and error handling
+
+### How To Run
+
+```bash
+python file_system_analyzer.py <folder_path>
+```
+
+Example:
+
+```bash
+python file_system_analyzer.py Documents
+```
+
+### Report Sections
+
+The generated report contains three sections:
+
+* **Extension Summary** – File extensions, file counts, and total storage used
+* **Old Files** – Files older than 30 days, including last modified date and age
+* **Duplicate Files** – Duplicate filenames, file sizes, and their locations
+
+The report is saved as:
+
+```text
+file_system_report.csv
+```
+
+### Topics Covered
+
+* Modules and Libraries
+* Command-Line Arguments
+* File System Operations
+* CSV File Handling
+* Date and Time
+* Dictionaries
+* Lists
+* Functions
+* Error Handling
+* Data Aggregation
+* Report Generation
+
+### Standard Library Modules Used
+
+* `argparse` – Parse command-line arguments
+* `pathlib` – Navigate and inspect the file system
+* `collections.defaultdict` – Group duplicate files efficiently
+* `datetime` – Calculate file ages
+* `csv` – Export analysis reports
+* `sys` – Handle program termination and errors
+
+### Example Concepts Demonstrated
+
+* Parsing command-line arguments with `argparse`
+* Traversing directories using `pathlib`
+* Grouping data with dictionaries and `defaultdict`
+* Reading file metadata
+* Calculating file ages from timestamps
+* Formatting file sizes into human-readable units
+* Detecting duplicate files using composite keys
+* Generating structured CSV reports
+* Validating user input and file paths
+* Building a complete command-line utility
+
+### Learning Outcomes
+
+This project demonstrates how to combine multiple Python standard library modules to build a practical file management application. It provides experience with command-line programming, file system navigation, data aggregation, report generation, and working with file metadata while reinforcing modular program design and problem-solving skills.
+
+
 
 
 
